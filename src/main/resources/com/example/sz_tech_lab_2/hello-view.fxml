@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="600.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.sz_tech_lab_2.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <MenuBar>
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Nowy" />
+               <RadioMenuItem mnemonicParsing="false" text="1" />
+               <RadioMenuItem mnemonicParsing="false" onAction="#closeMenuClick" text="2" />
+               <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Edit">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Delete" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Help">
+         <items>
+           <MenuItem mnemonicParsing="false" text="About" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <RadioButton mnemonicParsing="false" onAction="#blueButtonClick" text="niebieski">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+                  <toggleGroup>
+                     <ToggleGroup fx:id="g1" />
+                  </toggleGroup>
+               </RadioButton>
+               <RadioButton mnemonicParsing="false" onAction="#greenButtonClick" text="zielony" toggleGroup="$g1">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </RadioButton>
+               <RadioButton mnemonicParsing="false" onAction="#redButtonClick" text="czerwony" toggleGroup="$g1">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </RadioButton>
+            </children>
+         </VBox>
+         <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <RadioButton mnemonicParsing="false" onAction="#oneButtonClick" text="1">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+                  <toggleGroup>
+                     <ToggleGroup fx:id="g2" />
+                  </toggleGroup>
+               </RadioButton>
+               <RadioButton mnemonicParsing="false" onAction="#twoButtonClick" text="2" toggleGroup="$g2">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </RadioButton>
+               <RadioButton mnemonicParsing="false" onAction="#threeButtonClick" text="3" toggleGroup="$g2">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </RadioButton>
+               <Label fx:id="labelText" text="Label">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </Label>
+            </children>
+         </VBox>
+         <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </CheckBox>
+               <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </CheckBox>
+               <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+               </CheckBox>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab text="Untitled Tab 1">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <HBox prefHeight="171.0" prefWidth="560.0">
+                        <children>
+                           <VBox prefHeight="171.0" prefWidth="209.0">
+                              <children>
+                                 <RadioButton mnemonicParsing="false" onAction="#calendarButtonClick" text="Calendar">
+                                    <padding>
+                                       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <toggleGroup>
+                                       <ToggleGroup fx:id="g3" />
+                                    </toggleGroup>
+                                 </RadioButton>
+                                 <RadioButton mnemonicParsing="false" onAction="#contactsButtonClick" text="Contacts" toggleGroup="$g3">
+                                    <padding>
+                                       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                 </RadioButton>
+                                 <RadioButton mnemonicParsing="false" onAction="#homeButtonClick" text="Home" toggleGroup="$g3">
+                                    <padding>
+                                       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                 </RadioButton>
+                              </children>
+                           </VBox>
+                           <ImageView fx:id="imgView" fitHeight="173.0" fitWidth="349.0" pickOnBounds="true" preserveRatio="true" />
+                        </children>
+                     </HBox>
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+       <Tab text="Untitled Tab 2">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+       </Tab>
+     </tabs>
+   </TabPane>
+</VBox>
